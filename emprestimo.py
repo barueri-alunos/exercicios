@@ -14,7 +14,7 @@ idade = int(input('Digite sua idade: '))
 if idade > 16:
 
     # simulação de saldo
-    saldo = 2300.50
+    saldo = 1000
 
     # Ações da variável de entrada para atm
     print('\nDigite 1 para depósito')
@@ -48,11 +48,11 @@ if idade > 16:
     elif entrada_atm == 2:
         print(f'Olá {nome} você digitou a opção de saque\n')
         valor_saque = float(input('Digite o valor de saque: '))
-        if valor_saque < 1000:
-            saldo = saldo - valor_saque
-            print(f'{nome}, seu saldo é de: R${saldo}')
+        if valor_saque < 1000 and valor_saque > 0 and valor_saque <= saldo:
+            saldo_novo = saldo - valor_saque
+            print(f'{nome}, seu saldo é de: R${saldo_novo}')
         else:
-            print('O valor de saque não pode ser maior do que R$ 1000.00')
+            print('O valor de saque não permitido')
     
     elif entrada_atm == 3:
         print(f'Olá {nome}, você digitou a opção de empréstimo\n')

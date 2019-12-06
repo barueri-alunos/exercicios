@@ -8,7 +8,7 @@ def desenhaQuadradoMulticolorido(t, tam):
         t.left(90)
 
 wn = turtle.Screen()              # Inicializa a janela e seus atributos
-wn.bgcolor("lightgreen")
+wn.bgcolor("black")
 
 tess = turtle.Turtle()            # cria tess e seus atributos
 tess.pensize(3)

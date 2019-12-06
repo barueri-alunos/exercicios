@@ -1,25 +1,31 @@
-
 filmes = [
     {
         "titulo":"Invocação do Mal",
-        "classificacao": 16},
+        "classificacao": 16
+    },
     {
         "titulo":"Rei Leão",
-        "classificacao": 12},
+        "classificacao": 12
+    },
     {
         "titulo":"Lagoa Azul",
-        "classificacao": 16},
+        "classificacao": 16
+    },
     {
         "titulo":"Ninja Assassino",
         "classificacao": 18},
 ]
 
-idade = int(input('Qual a sua idade? '))
+idade = int(input('qual a sua idade?'))
 while idade < 0:
-    print('Idade inválida')
-    idade = int(input('Qual a sua idade? '))
+    print('Idade Inválida')
+    idade = int(input('qual a sua idade de verdade?'))
 for filme in filmes:
     if idade >= filme['classificacao']:
-        print(f'você pode assistir ao filme {filme["titulo"]}')
+        print(f'Você pode assistir {filme["titulo"]}')
     elif idade < filme['classificacao']:
-        print(f'o filme {filme["titulo"]} Você ainda não tem idade para este filme')
+        print(f'Você não pode assistir {filme["titulo"]}')
+
+
+
+
